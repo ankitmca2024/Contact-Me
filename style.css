@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background: url("C:/Users/kingr/Downloads/mic.jpg.jpg");
+}
+.main{
+    width: 400px;
+    height: 500px;
+    border: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    background: url("C:/Users/kingr/OneDrive/Pictures/1714373469176.jpg");
+    border-radius: 20px;
+    box-shadow: 10px 5px 10px white;
+}
+h1{
+    margin-top: 25px;
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 15px;
+}
+label{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: green;
+}
+input,textarea{
+    width: 305px;
+    height: 30px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background: white;
+
+}
+textarea{
+    height: 100px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+input:hover,textarea:hover{
+    background: wheat;
+    cursor: pointer;
+}
+input::placeholder{
+    font-size: 15px;
+}
+textarea::placeholder{
+    font-size: 15px;
+}
+button{
+  width: 100px;
+  margin-left: 110px;
+  font-size: 20px;
+  height: 35px;
+  border-radius: 20px;
+  background: tomato;
+  border: none;
+  box-shadow: 0 0 0.7rem black;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+button:hover{
+    background: skyblue;
+}
+

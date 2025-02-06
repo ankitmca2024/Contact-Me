@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Mail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h1>Contact Me</h1><hr>
+            <label for="text1">Name:</label><br>
+            <input type="text" id="name" placeholder="Enter your name." required><br><br>
+            <label for="text2">E-mail:</label><br>
+            <input type="email" id="email" placeholder="Enter your email." required><br><br>
+            <label for="text3">Mobile No:</label><br>
+            <input type="text" id="mobile" placeholder="Enter your mobile no." required><br><br>
+            <label for="text4">Message:</label><br>
+            <textarea name="message" id="message" placeholder="Write message......." required></textarea><br><hr><br>
+            <button type="submit" name="submit">Send</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "kingraja100702@gmail.com",
+                Password : "2872D6FDF2004584B8B2C2E0300ACF838872",
+                To : 'kingraja100702@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New contact form enquiry",
+                Body : "Name:"+document.getElementById("name").value
+                + "<br> Email:"+document.getElementById("email").value
+                + "<br> mobile:"+document.getElementById("mobile").value
+                + "<br> message:"+document.getElementById("message").value
+            }).then(
+              message => alert("message send succesfully")
+            );
+        }
+    </script>
+</body>
+</html>
